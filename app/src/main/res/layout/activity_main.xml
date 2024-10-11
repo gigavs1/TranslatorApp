@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/offWhite">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!-- start design for the logo and text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/translate"
+                android:layout_gravity="center"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LingoMatic"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:textSize="23sp"
+                android:layout_gravity="center"
+                android:letterSpacing="0.1"/>
+
+        </LinearLayout>
+<!-- end design for the logo and text -->
+
+<!--00000000000000000000000000000000000000000000-->
+
+<!-- start design for the spinner that
+contain selection of language "FROM" - "TO"-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:weightSum="3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/background"
+            android:elevation="4dp">
+
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/idFromSpinner"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/exchange"
+                android:layout_gravity="center"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/idFToSpinner"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+<!-- start design for the spinner that
+contain selection of language "FROM" - "TO"-->
+
+<!--00000000000000000000000000000000000000000000-->
+
+<!-- start design for input text field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            app:hintEnabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            app:boxBackgroundMode="none"
+            android:elevation="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idEditSource"
+                android:layout_width="355dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/background"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Enter Text"
+                android:importantForAutofill="no"
+                android:inputType="textImeMultiLine|textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorSecondary"
+                android:textSize="19sp"
+                android:layout_gravity="center"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!-- end design for input text field -->
+
+<!--00000000000000000000000000000000000000000000-->
+
+<!-- start design for translate btn and speech to text btn-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/idBtnTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="TRANSLATE"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTranslatedTV"
+            android:text="Translation"
+            android:elevation="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:padding="16sp"
+            android:textSize="16sp"
+            android:textColor="@color/colorSecondary"
+            android:letterSpacing="0.03"
+            android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/microphone"
+                android:padding="4dp"
+                android:id="@+id/idIVMic"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speech To Text"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"/>
+<!-- end design for translate btn and speech to text btn-->
+
+
+    </LinearLayout>
+
+</ScrollView>
